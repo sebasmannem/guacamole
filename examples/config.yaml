@@ -1,0 +1,16 @@
+id: 13
+checksum: 431f43417088cb1635d3e0483ae74b2fef5b1e5a75fd4c6c802ed8e5359da811
+parent: f28e0603e8bd5850f1cca858fcdd1d444a612bbce73a63b056af9f8f6a3968ac
+timestamp: 1587906406.566635
+master: 127.0.0.1:5432
+topology:
+  - 127.0.0.1:5432:
+      raft: 127.0.0.1:11001
+  - 127.0.0.1:5433:
+      raft: 127.0.0.1:11002
+      upstream: 127.0.0.1:5432
+      type: physical
+  - 127.0.0.1:5434:
+      raft: 127.0.0.1:11003
+      upstream: 127.0.0.1:5432
+      type: logical
