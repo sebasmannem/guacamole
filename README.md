@@ -8,6 +8,8 @@ It aims at 2 distinct functionalities:
 1. Cluster managament with state of the art technologies
 2. Being controlplane for your postgres, exposed as an API
 
+As a sidenote, we will try to allow running guacamole as a sidecar rather thn as part of the main Postgres container. This seems achievable, but we still need to find a way that works for this...
+
 This means that when guacamole is running on your cluster servers / pods Postgres (by fefault) is not initialized, running, started, etc.
 But the controlplane is, and it alows you to create a cluster anyway you like.
 In the future, we might add a init option, which allows you to start it automated without requiring any interaction.
